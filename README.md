@@ -43,7 +43,7 @@ void loop() {
 
 ## Notes
 
-This library was written from documentation and the following repos
+This library was written from the following resources
 - https://support.newhavendisplay.com/hc/en-us/articles/4414485495703--US2066
 - https://newhavendisplay.com/content/specs/NHD-0216AW-IB3.pdf
 - https://github.com/NewhavenDisplay/NHD_US2066
