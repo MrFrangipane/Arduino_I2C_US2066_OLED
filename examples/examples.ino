@@ -6,25 +6,26 @@ WireOled display;
 
 
 void setup() {
-  display.init();
-  display.write("Frangitron");
-  display.write(1, 0, "Hello");
+    if (display.detect()) {
+        display.init();
+        display.write("Frangitron");
+        display.write(1, 0, "Hello");
+    }
 }
 
 
 void loop() {
-  display.setActive(true);
-  
-  display.setCursorBlinking(false);
-  delay(500);
-  display.setCursorBlinking(true);
-  delay(500);
-  display.setContrast(0);
-  delay(500);
-  display.setContrast(255);
-  delay(500);
+      display.setActive(true);
 
-  display.setActive(false);
-  delay(500);
-  
+      display.setCursorBlinking(false);
+      delay(500);
+      display.setCursorBlinking(true);
+      delay(500);
+      display.setContrast(0);
+      delay(500);
+      display.setContrast(255);
+      delay(500);
+
+      display.setActive(false);
+      delay(500);
 }

@@ -10,6 +10,7 @@ with a NewHaven [NHD-0216AW-IB3](https://newhavendisplay.com/2x16-character-blue
 ## Usage
 
 ```C++
+// Minimal example for Raspberry Pi Pico and NHD-0216AW-IB3 Display
 #include <WireOled.h>
 
 
@@ -17,27 +18,28 @@ WireOled display;
 
 
 void setup() {
-  display.init();
-  display.write("Frangitron");
-  display.write(1, 0, "Hello");
+    if (display.detect()) {
+        display.init();
+        display.write("Frangitron");
+        display.write(1, 0, "Hello");
+    }
 }
 
 
 void loop() {
-  display.setActive(true);
-  
-  display.setCursorBlinking(false);
-  delay(500);
-  display.setCursorBlinking(true);
-  delay(500);
-  display.setContrast(0);
-  delay(500);
-  display.setContrast(255);
-  delay(500);
-
-  display.setActive(false);
-  delay(500);
-  
+    display.setActive(true);
+    
+    display.setCursorBlinking(false);
+    delay(500);
+    display.setCursorBlinking(true);
+    delay(500);
+    display.setContrast(0);
+    delay(500);
+    display.setContrast(255);
+    delay(500);
+    
+    display.setActive(false);
+    delay(500);
 }
 ```
 
