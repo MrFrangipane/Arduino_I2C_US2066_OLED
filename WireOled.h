@@ -27,11 +27,16 @@ public:
     WireOled();
     ~WireOled();
 
-    void init();
+    bool detect(const WireOledConfig config);
+    bool detect();
+
     void init(const WireOledConfig config);
+    void init();
+
     void setActive(bool isActive);
     void setContrast(uint8_t contrast);
     void setCursorBlinking(bool isBlinking);
+
     void clear();
     void home();
     void move(uint8_t row, uint8_t col);

@@ -5,6 +5,29 @@ WireOled::WireOled() {}
 WireOled::~WireOled() {}
 
 
+bool WireOled::detect(struct WireOledConfig config) {
+    mConfig = config;
+    return detect();
+}
+
+
+bool WireOled::detect() {
+    bool result = false;
+
+    Wire.begin();
+    pinMode(mConfig.pinReset, OUTPUT);
+    digitalWrite(mConfig.pinReset, HIGH);
+
+    Wire.beginTransmission(mConfig.addr);
+    if (Wire.endTransmission() == 0) {
+        result = true;
+    }
+
+    Wire.end();
+    return result;
+}
+
+
 void WireOled::init(struct WireOledConfig config) {
     mConfig = config;
     init();
