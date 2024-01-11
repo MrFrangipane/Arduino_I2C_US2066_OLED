@@ -50,4 +50,7 @@ This library was written from the following resources
 
 ### Todo
 
-- Use namespace and const expression instead of #define
+- [ ] Use namespace and const expression instead of #define
+- [ ] Allow to choose address
+- [ ] Allow 4 rows displays
+- [ ] Allow to change SEG pins [see issue from official lib](https://github.com/NewhavenDisplay/NHD_US2066/issues/1)
