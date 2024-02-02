@@ -28,4 +28,6 @@ void loop() {
 
       display.setActive(false);
       delay(500);
+
+      display.pollScreensaver();  // turns of screen if inactive for more than 30s
 }
