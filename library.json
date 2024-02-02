@@ -1,5 +1,5 @@
 {
-    "name": "Arduino I2C US2066 OLED",
+    "name": "Arduino_I2C_US2066_OLED",
     "keywords": "OLED,US2066,I2C,Display",
     "description": "Arduino library for using US2066 OLED displays through I2C",
     "repository": {
